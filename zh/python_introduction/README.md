@@ -248,13 +248,13 @@
 
 正如你所见，你可以通过使用列表名和置于方括号中的对象索引来访问列表中的不同元素。
 
-如果需要从列表中删除元素，需要使用 **索引** 和上面学到的 **del** 语句 （del 是 delete 的缩写）来完成。 我们看个例子，删除列表中的第一个数字，以加强我们之前学到的知识。
+如果需要从列表中删除元素，需要使用 **索引** 和上面学到的 `pop()` 语句来完成。 我们看个例子，删除列表中的第一个数字，以加强我们之前学到的知识。
 
     >>> print(lottery)
     [59, 42, 30, 19, 12, 3, 199]
     >>> print(lottery[0])
     59
-    >>> del lottery[0]
+    >>> lottery.pop(0)
     >>> print(lottery)
     [42, 30, 19, 12, 3, 199]
     
@@ -322,9 +322,9 @@
 
 我希望你能觉得到目前为止这些都合情合理。:)准备享受更多字典的乐趣吗？跳到下一行去做一些更有趣的事情。
 
-你可以使用`del`命令去删除字典里的元素。 比如，如果你想删除键`'favorite_numbers'`所对应的项，只需要键入如下命令：
+你可以使用`pop() `语句去删除字典里的元素。 比如，如果你想删除键`'favorite_numbers'`所对应的项，只需要键入如下命令：
 
-    >>> del participant['favorite_numbers']
+    >>> participant.pop('favorite_numbers')
     >>> participant
     {'country': 'Poland', 'favorite_language': 'Python', 'name': 'Ola'}
     
@@ -406,7 +406,7 @@
     >>> 1 > 'django'
     Traceback (most recent call last):
       File "<stdin>", line 1, in <module>
-    TypeError: unorderable types: int() > str()
+    TypeError: '>' not supported between instances of 'int' and 'str'
     
 
 在这里你看到就像在这表达式中，Python 是不能比较数字 （`int`） 和字符串 （`str`）。 相反，它显示一个 **TypeError**，并告诉我们两个类型不能相互比较。
@@ -477,17 +477,17 @@
 
 在 Mac 上命令会看起来像这样：
 
-    $ cd /Users/<your_name>/Desktop
+    $ cd ~/Desktop
     
 
 在Linux，它会看起来像这样（“桌面”可能会被翻译成您所在的语言）：
 
-    $ cd /home/<your_name>/Desktop
+    $ cd ~/Desktop
     
 
 并在 windows 上，它会看起来像这样：
 
-    > cd C:\Users\<your_name>\Desktop
+    > cd %HomePath%\Desktop
     
 
 如果你遇到麻烦了，尽管提问寻求帮助。

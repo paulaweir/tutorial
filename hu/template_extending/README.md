@@ -43,7 +43,7 @@ Majd nyisd meg, és másolj át mindent a `post_list.html`-ből a `base.html`-be
                             {{ post.published_date }}
                         </div>
                         <h1><a href="">{{ post.title }}</a></h1>
-                        <p>{{ post.text|linebreaks }}</p>
+                        <p>{{ post.text|linebreaksbr }}</p>
                     </div>
                 {% endfor %}
                 </div>
@@ -89,7 +89,7 @@ Most mentsd el, és nyisd meg újra a `blog/templates/blog/post_list.html`-t. T�
             {{ post.published_date }}
         </div>
         <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaks }}</p>
+        <p>{{ post.text|linebreaksbr }}</p>
     </div>
 {% endfor %}
 ```
@@ -99,7 +99,7 @@ Most mentsd el, és nyisd meg újra a `blog/templates/blog/post_list.html`-t. T�
     {% extends 'blog/base.html' %}
     
 
-{% raw %}Ez azt jelenti, hogy most a `base.html` template-et egészítjük ki a `post_list.html`-ben. Már csak egy dolog van hátra: az előző sor kivételével rakj mindent `{% block content %}` és `{% endblock content %}` közé. Így:{% endraw %}
+{% raw %}Ez azt jelenti, hogy most a `base.html` template-et egészítjük ki a `post_list.html`-ben. Már csak egy dolog van hátra: az előző sor kivételével rakj mindent `{% block content %}` és `{% endblock %}` közé. Így:{% endraw %}
 
 ```html
 {% extends 'blog/base.html' %}
@@ -111,10 +111,10 @@ Most mentsd el, és nyisd meg újra a `blog/templates/blog/post_list.html`-t. T�
                 {{ post.published_date }}
             </div>
             <h1><a href="">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaks }}</p>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
     {% endfor %}
-{% endblock content %}
+{% endblock %}
 ```
 
 Ez az! Nézd meg, hogy még mindig működik-e a weboldalad :)

@@ -53,7 +53,7 @@ Facciamo qualche cambiamento in `mysite/settings.py`. Apri il file usando il cod
 
 Sarebbe bello avere l'ora corretta sul nostro sito Web. Vai alla [lista di fusi orari di wikipedia][2] e copia il tuo fuso orario (TZ). (es. `Europe/Berlin`)
 
- [2]: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+ [2]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 In settings.py, trova la riga che contiene `TIME_ZONE` e modificala per scegliere il tuo fuso orario:
 
@@ -126,7 +126,8 @@ Ora tutto quello che devi fare è controllare che il tuo sito sia in esecuzione.
     http://127.0.0.1:8000/
     
 
-Il server web assumerà il command prompt finché non lo fermi. Per digitare più comandi mentre è in esecuzione apri una nuova finestra di terminale e attiva il tuo virtualenv. Per fermare il server web, torna alla finestra dove è in esecuzione e premi i pulsanti CTRL+C - Control and C insieme (su Windows, è probabile che tu deva premere Ctrl+Break).
+
+Il server web assumerà il controllo del command prompt finché non lo fermi. Per digitare più comandi mentre è in esecuzione apri una nuova finestra di terminale e attiva il tuo virtualenv. Per fermare il server web, torna alla finestra dove è in esecuzione e premi i pulsanti CTRL+C - Control e C insieme (su Windows, è probabile che tu deva premere Ctrl+Break).
 
 Congratulazioni! Hai appena creato il tuo primo sito e l'hai avviato usando un web server! Non è fantastico?
 

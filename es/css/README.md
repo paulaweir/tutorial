@@ -10,7 +10,7 @@ Pero no queremos empezar de cero otra vez, ¿verdad? Una vez más, usaremos algo
 
 ## ¡Vamos a usar Bootstrap!
 
-Bootstrap es uno de los frameworks HTML y CSS más populares para desarrollar webs bonitas: http://getbootstrap.com/
+Bootstrap es uno de los frameworks HTML y CSS más populares para desarrollar webs bonitas: https://getbootstrap.com/
 
 Lo escribieron programadores que trabajaban para Twitter y ahora lo desarrollan voluntarios de todo el mundo.
 
@@ -44,7 +44,8 @@ Esto lo conseguimos creando una carpeta llamada `static` dentro de la aplicació
     djangogirls
     ├── blog
     │   ├── migrations
-    │   └── static
+    │   ├── static
+    │   └── templates
     └── mysite
     
 
@@ -65,7 +66,7 @@ Crea un nuevo directorio llamado `css` dentro de tu directorio `static`. Para a�
 
 No vamos a entrar mucho en la personalización y el aprendizaje de CSS aquí porque es bastante fácil y lo puedes aprender por tu cuenta después de este taller. Recomendamos enormemente hacer este [curso de HTML y CSS en Codecademy][2] para aprender todo lo que necesitas saber sobre cómo hacer tus sitios web más bonitos con CSS.
 
- [2]: http://www.codecademy.com/tracks/web
+ [2]: https://www.codecademy.com/tracks/web
 
 Pero vamos a hacer un poco al menos. ¿Tal vez podríamos cambiar el color de nuestro título? Los ordenadores utilizan códigos especiales para entender los colores. Empiezan con `#` y les siguen 6 letras (A-F) y números (0-9). Puedes encontrar códigos de color, por ejemplo, aquí: http://www.colorpicker.com/. También puedes utilizar [colores predefinidos][3] utilizando su nombre en inglés, como `red` y `green`.
 
@@ -84,7 +85,7 @@ En tu fichero `blog/static/css/blog.css` deberías añadir el siguiente código:
 En un fichero CSS definimos los estilos para los elementos del fichero HTML. Los elementos se identifican por el nombre del elemento (es decir, `a`, `h1`, `body`), el atributo `class` (clase) o el atributo `id` (identificador). Class e id son nombres que le asignas tú misma al elemento. Las clases definen grupos de elementos y los ids apuntan a elementos específicos. Por ejemplo, la siguiente etiqueta se puede identificar con CSS usando el nombre `a`, la clase `external_link` o el id `link_to_wiki_page`:
 
 ```html
-    <a href="http://en.wikipedia.org/wiki/Django" class="external_link" id="link_to_wiki_page">
+    <a href="https://en.wikipedia.org/wiki/Django" class="external_link" id="link_to_wiki_page">
 ```    
 
 Puedes leer más sobre [selectores de CSS en w3schools][4].
@@ -125,7 +126,7 @@ Ahora tu fichero debería tener este aspecto:
                 <div>
                     <p>published: {{ post.published_date }}</p>
                     <h1><a href="">{{ post.title }}</a></h1>
-                    <p>{{ post.text|linebreaks }}</p>
+                    <p>{{ post.text|linebreaksbr }}</p>
                 </div>
             {% endfor %}
         </body>
@@ -155,7 +156,7 @@ Añade esto a tu CSS, guarda el fichero y ¡mira cómo funciona!
 ¿Quizá podríamos personalizar la tipografía del título? Pega esto en la sección `<head>` del fichero `blog/templates/blog/post_list.html`:
 
 ```html
-    <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 ```    
 
 Esta línea va a importar una tipografía llamada *Lobster* de Google Fonts (https://www.google.com/fonts).
@@ -191,7 +192,7 @@ Y ahora añade la clase `post` al `div` que contiene una entrada del blog.
     <div class="post">
         <p>published: {{ post.published_date }}</p>
         <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaks }}</p>
+        <p>{{ post.text|linebreaksbr }}</p>
     </div>
 ```    
 
@@ -254,7 +255,7 @@ Luego rodea el código HTML que muestra las entradas con las declaraciones de cl
         <div class="post">
             <p>published: {{ post.published_date }}</p>
             <h1><a href="">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaks }}</p>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
     {% endfor %}
 ```    
@@ -271,7 +272,7 @@ en `blog/templates/blog/post_list.html` por esto:
                             {{ post.published_date }}
                         </div>
                         <h1><a href="">{{ post.title }}</a></h1>
-                        <p>{{ post.text|linebreaks }}</p>
+                        <p>{{ post.text|linebreaksbr }}</p>
                     </div>
                 {% endfor %}
             </div>

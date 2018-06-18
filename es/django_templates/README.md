@@ -26,7 +26,7 @@ Prueba esto en tu plantilla `blog/templates/blog/post_list.html` (reemplaza el s
 
 Como puedes ver, todo lo que obtenemos es esto:
 
-    [<Post: Mi segundo post>, <Post: Mi primer post>]
+    <QuerySet [<Post: Mi segundo post>, <Post: Mi primer post>]>
     
 
 Esto significa que Django lo entiende como una lista de objetos. ¿Recuerdas de **Introducción a Python** cómo podemos mostrar listas? Sí, ¡con los ciclos for! En una plantilla de Django, lo haces de esta manera:
@@ -54,7 +54,7 @@ Prueba esto en tu plantilla.
         <div>
             <p>published: {{ post.published_date }}</p>
             <h1><a href="">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaks }}</p>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
     {% endfor %}
 ```    
@@ -65,7 +65,7 @@ Todo lo que pones entre `{% for %}` y `{% endfor %}` se repetirá para cada obje
 
  [3]: images/step3.png
 
-¿Has notado que utilizamos una notación diferente esta vez `{{ post.title }}` o `{{ post.text }}`? Estamos accediendo a datos en cada uno de los campos definidos en nuestro modelo `Post`. También el `|linebreaks` está dirigiendo el texto de los posts a través de un filtro para convertir saltos de línea en párrafos.
+¿Has notado que utilizamos una notación diferente esta vez `{{ post.title }}` o `{{ post.text }}`? Estamos accediendo a datos en cada uno de los campos definidos en nuestro modelo `Post`. También el `|linebreaksbr` está dirigiendo el texto de los posts a través de un filtro para convertir saltos de línea en párrafos.
 
 ## Una cosa más
 
@@ -76,7 +76,7 @@ Sería bueno ver si tu sitio web seguirá funcionando en la Internet pública, �
 ```
 $ git status
 [...]
-$ git add -A .
+$ git add --all .
 $ git status
 [...]
 $ git commit -m "Modified templates to display posts from database."

@@ -35,7 +35,7 @@ HTML代表“HyperText Markup Language（超文本标记语言）”。 **超文
 
  [1]: images/step1.png
 
-再也没有错误了 ！祝贺:)然而，您的网站实际上并没有展现任何东西出了一个空白页，因为您的模板也是空。我们需要解决这个问题。
+再也没有错误了 ！祝贺 :) 然而，您的网站实际上并没有展现任何东西除了一个空白页，因为您的模板也是空。我们需要解决这个问题。
 
 在您的模板文件中添加以下内容：
 
@@ -103,7 +103,7 @@ HTML代表“HyperText Markup Language（超文本标记语言）”。 **超文
 *   `<em>text</em>` 强调您的文本
 *   `<strong>text</strong>` 强烈强调您的文本
 *   `<br />` 跳转到下一行（你不能放任何东西在br里面）
-*   `<a href="http://djangogirls.org">link</a>` 创建一个链接
+*   `<a href="https://djangogirls.org">link</a>` 创建一个链接
 *   `<ul><li>first item</li><li>second item</li></ul>` 产生一个列表，就像这样！
 *   `<div></div>` 定义页面上的一个段
 
@@ -152,7 +152,7 @@ HTML代表“HyperText Markup Language（超文本标记语言）”。 **超文
 
 我们把这些成果放到网上一定很棒，对吧？让我们再来一次 PythonAnywhere 部署：
 
-### 提交并推送代码到Github
+### 提交并推送代码到 GitHub
 
 首先，让我们看看上次部署之后什么文件改变了（运行这些本地命令，不是在 PythonAnywhere 上）：
 
@@ -161,7 +161,7 @@ HTML代表“HyperText Markup Language（超文本标记语言）”。 **超文
 
 请确保你在 `djangogirls` 目录中，让我们告诉 `git` 包括此目录内的所有更改：
 
-    $ git add -A .
+    $ git add --all .
     
 
 > **注**`-A`（简称"全部"） 意味着，`git` 也会认识到如果你已经删除的文件 （默认情况下，它只能识别新的/已修改的文件）。 此外记得 （在第 3 章）`.` 意味着当前目录。
@@ -178,7 +178,7 @@ HTML代表“HyperText Markup Language（超文本标记语言）”。 **超文
 
 > **注意** 请确保您使用双引号括提交消息。
 
-做完这些，我们上传（push）改动到 Github：
+做完这些，我们上传（push）改动到 GitHub ：
 
     git push
     

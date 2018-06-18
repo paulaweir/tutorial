@@ -23,7 +23,7 @@ I template vengono salvati in una cartella `blog/templates/blog`. Quindi prima c
         └───blog
 
 
-(Ti chiederai perché abbiamo bisogno di due directory chiamate entrambe `blog` - come scoprirai più tardi, si tratta semplicemente di una denominazione convenzionale che serve rendere la vita più facile.)
+(Ti chiederai perché abbiamo bisogno di due directory chiamate entrambe `blog` - come scoprirai più tardi, si tratta semplicemente di una denominazione convenzionale che serve a rendere la vita più facile.)
 
 E ora crea un file `post_list.html` nella directory `blog/templates/blog` (lascialo in bianco per adesso).
 
@@ -46,7 +46,7 @@ Aggiungi quanto segue nel tuo file template:
 </html>
 ```
 
-Quindi come appare il tuo sito ora? clicca per scoprirlo: http://127.0.0.1:8000/
+Quindi come appare il tuo sito ora? Clicca per scoprirlo: http://127.0.0.1:8000/
 
 ![Figura 11.2][2]
 
@@ -105,7 +105,7 @@ Ora puoi divertirti un po' e provare a personalizzare il tuo template! Qua ci so
 *   `<em>text</em>` enfatizza il tuo testo
 *   `<strong>text</strong>` enfatizza fortemente il tuo testo
 *   `<br />` va in un'altra riga (puoi mettere qualsiasi cosa dentro br)
-*   `<a href="http://djangogirls.org">link</a>` crea un link
+*   `<a href="https://djangogirls.org">link</a>` crea un link
 *   `<ul><li>primo elemento</li><li>secondo elemento</li></ul>` fa una lista, proprio come questa qui!
 *   `<div></div>` definisce una sezione della pagina
 
@@ -164,7 +164,7 @@ Prima di tutto, vediamo quali file sono cambiati dall'ultimo deploy (esegui ques
 
 Assicurati di essere nella directory `djangogirls` e diciamo a `git` di includere tutte le modifiche in questa directory:
 
-    $ git add -A .
+    $ git add --all .
 
 
 > **Nota** `-A` (diminutivo di "all") significa che `git` riconoscerà anche il fatto che hai cancellato dei file (per impostazione predefinita, esso riconosce soltanto i file nuovi/modificati). Ricorda anche (dal capitolo 3) che il `.` significa la directory attuale.

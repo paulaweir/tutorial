@@ -105,7 +105,7 @@ Tienes que seguir estas reglas de etiquetas de *cierre* y de *anidación* de ele
 *   `<em>texto</em>` - pone en cursiva tu texto
 *   `<strong>texto</strong>` - pone en negrita tu texto
 *   `<br />` - un salto de línea (no puedes colocar nada dentro de br)
-*   `<a href="http://djangogirls.org">link</a>` - crea un vínculo
+*   `<a href="https://djangogirls.org">link</a>` - crea un vínculo
 *   `<ul><li>primer elemento</li><li>segundo elemento</li></ul>` - crea una lista, ¡igual que esta!
 *   `<div></div>` - define una sección de la página
 
@@ -164,7 +164,7 @@ En primer lugar, veamos qué archivos han cambiado desde que hicimos el desplieg
 
 Asegúrate de que estás en el directorio `djangogirls` y vamos a decirle a `git` que incluya todos los cambios dentro de este directorio:
 
-    $ git add -A .
+    $ git add --all .
     
 
 > **Nota** `-A` (abreviatura de "all") significa que `git` también reconocerá si has eliminado archivos (por defecto, sólo reconoce archivos nuevos/modificados). También recuerda (del capítulo 3) que `.` significa el directorio actual.

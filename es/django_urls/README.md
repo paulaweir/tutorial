@@ -4,7 +4,7 @@ Vamos a construir nuestra primera página web -- ¡una página de inicio para tu
 
 ## ¿Qué es una URL?
 
-Una URL es simplemente una dirección web, puedes ver una URL cada vez que visitas cualquier sitio web - es visible en la barra de direcciones de tu navegador (¡Sí! `127.0.0.1:8000` es una URL. Y http://djangogirls.com es también una URL):
+Una URL es simplemente una dirección web, puedes ver una URL cada vez que visitas cualquier sitio web - es visible en la barra de direcciones de tu navegador (¡Sí! `127.0.0.1:8000` es una URL. Y http://djangogirls.org es también una URL):
 
 ![URL][1]
 
@@ -87,7 +87,7 @@ Tu archivo `mysite/urls.py` debería verse como este:
 
 Django ahora redirigirá todo lo que vaya hacia 'http://127.0.0.1:8000/' a `blog.urls` y buscará más instrucciones allí.
 
-Cuando escribes expresiones regulares en Python acostúmbrate a poner `r` al principio de la cadena - esto es solamente una pista para que Python entienda que la cadena contenerá caracteres especiales que no son para ser interpretados por Python sino que son parte de la expresión regular.
+Cuando escribes expresiones regulares en Python acostúmbrate a poner `r` al principio de la cadena - esto es solamente una pista para que Python entienda que la cadena contendrá caracteres especiales que no son para ser interpretados por Python sino que son parte de la expresión regular.
 
 ## blog.urls
 

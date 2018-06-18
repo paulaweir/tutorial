@@ -26,7 +26,7 @@ Próbáld ki a `blog/templates/blog/post_list.html` template-ben. Cserélj ki mi
 
 Ahogy látod, ez minden, amink van:
 
-    [<Post: My second post>, <Post: My first post>]
+    <QuerySet [<Post: My second post>, <Post: My first post>]>
     
 
 Ez azt jelenti, hogy a Django objektumok listájaként értelmezi. Emlékszel a **Bevezetés a Python-ba** című fejezetből, hogy hogyan jelenítünk meg listákat? Igen, for loop-okkal! Egy Django template-ben ezt így tudod megtenni:
@@ -54,7 +54,7 @@ Próbáld ki a template-edben.
     <div>
         <p>published: {{ post.published_date }}</p>
         <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaks }}</p>
+        <p>{{ post.text|linebreaksbr }}</p>
     </div>
 {% endfor %}
 ```    
@@ -65,7 +65,7 @@ Próbáld ki a template-edben.
 
  [3]: images/step3.png
 
-Észrevetted, hogy most egy kicsit más megjelölést használtunk: `{{ post.title }}`? Az adatokat a `Post` modelben meghatározott mezők szerint érjük el. Emellett `|linebreaks` kíséri a szöveget, ezáltal egy filteren keresztül új bekezdéssé alakítja az új sorokat.
+Észrevetted, hogy most egy kicsit más megjelölést használtunk: `{{ post.title }}`? Az adatokat a `Post` modelben meghatározott mezők szerint érjük el. Emellett `|linebreaksbr` kíséri a szöveget, ezáltal egy filteren keresztül új bekezdéssé alakítja az újsor karaktereket.
 
 ## Még valami
 
@@ -75,7 +75,7 @@ Jó lenne látni, hogy a weblapod még mindig működik az Interneten, nem igaz?
 ```
 $ git status
 [...]
-$ git add -A .
+$ git add --all .
 $ git status
 [...]
 $ git commit -m "Modified templates to display posts from database."
@@ -93,11 +93,11 @@ $ git pull
 [...]
 ```
 
-*   Végül, a [Web][5] menüpontban klikkelj a **Reload**-ra. A frissítések ott vannak!
+*   Végül, a [Web][5] menüpontban klikkelj a **Reload**-ra. A frissítések ott vannak!  Ha a blogposztok a PythonAnywhere oldaladon nem egyeznek a helyi gépeden lévő blogban lévőkkel, az nem probléma. Az adatbázisok a helyi gépeden és PythonAnywhere-en nem szinkronizálódnak a többi file-al együtt.
 
  [5]: https://www.pythonanywhere.com/web_app_setup/
 
-Gratulálunk! Folytatásképp hozz létre új bejegyzéseket a Django adminban (ne felejts el published_date-t hozzáadni), majd frissítsd az oldalt, hogy lásd, megjelentek-e.
+Gratulálunk! Folytatásképp hozz létre új bejegyzéseket a Django adminban (ne felejts el published_date-t hozzáadni). Ellenőrizd, hogy a pythonanywhere oldalhoz tartozó admin oldalon https://yourname.pythonanywhere.com/admin vagy. Majd frissítsd az oldalt, hogy lásd, megjelentek-e.
 
 Olyan, mint a varázslat? Büszkék vagyunk Rád! Hagy ott egy kicsit a gépet, megérdemelsz egy kis szünetet. :)
 

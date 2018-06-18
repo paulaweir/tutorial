@@ -22,10 +22,10 @@ Kezdjük azzal, hogy hozzáadunk egy linket a `blog/templates/blog/post_list.htm
                 {{ post.published_date }}
             </div>
             <h1><a href="">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaks }}</p>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
     {% endfor %}
-{% endblock content %}
+{% endblock %}
 ```
     
 
@@ -38,6 +38,8 @@ Kezdjük azzal, hogy hozzáadunk egy linket a `blog/templates/blog/post_list.htm
 {% raw %}Itt az ideje elmagyarázni a rejtélyes `{% url 'post_detail' pk=post.pk %}` részt. Ahogy gyaníthattad, a `{% %}` jelölés azt jelenti, hogy Django template tag-eket használunk. Ezúttal egy olyat, ami létrehoz egy URL-t nekünk!{% endraw %}
 
 A `blog.views.post_detail` egy elérési út a `post_detail` *view*-hez, amit létre akarunk hozni. Jegyezd meg: `blog` az applikációnk neve (a `blog` könyvtár), `views` a `views.py` nevéből van, és az utolsó rész - `post_detail` - a *nézet* neve.
+
+És a `pk=post.pk` rész? A `pk` a "primary key" (elsődleges kulcs) rövidítése, amely mindegyik bejegyzésnek egy egyedi neve az adatbázisban. Nem adtunk meg egy elsődleges kulcsot a `Post` modellünkben, ezért Django létre fog nekünk hozni egyet (alapértelmezetten egy számot fog használni, amely egyesével nő, pl. 1, 2, 3) és ezt egy `pk` nevű mezőben hozzáadja mindegyik posthoz. Az elsődleges kulcsot `post.pk`-al érhetjük el, ugyan úgy mint a többi mezőt (`title`, `author`, stb.) a `Post` objektumban!
 
 Most amikor a http://127.0.0.1:8000/ címre megyünk, lesz egy hibaüzenetünk (ahogy vártuk is, mivel nincsen sem URL, sem *view* a `post_detail`-hez). Így fog kinézni:
 
@@ -54,7 +56,7 @@ Az első bejegyzésünk részleteit a kövekező **URL** címen akarjuk megjelen
 Hozzunk létre egy URL-t a `blog/urls.py` fájlban, ami egy `post_detail` nevű *view*-ra mutat -- ez majd egy egész blogbejegyzést jelenít meg. Add hozzá a `url(r'^post/(?P<pk>[0-9]+)/$', views.post_detail, name='post_detail'),` sort a `blog/urls.py` fájlhoz. Így kell kinéznie a fájlnak:
 
 ```python
-from django.conf.urls import include, url
+from django.conf.urls import url
 from . import views
 
 urlpatterns = [
@@ -63,7 +65,11 @@ urlpatterns = [
 ]
 ```
 
-Ez a rész `^post/(?P<pk>[0-9]+)/$` elég ijesztően néz ki, de ne aggódj,elmagyarázzuk: - `^`-vel kezdődik -- "eleje" - `post/` azt jelenti, hogy az eleje után az URL-nek tartalmaznia kell ezt: **post** és **/**. Eddig jó. - `(?P<pk>[0-9]+)` - ez a rész trükkösebb. Ez azt jelenti, a Django fogja, amit ideraksz, és átirányítja egy nézethez egy `pk` nevű változóként. `[0-9]` azt közli, hogy ez csak egy számjegy lehet, betű nem (tehát minden 0 és 9 között). `+` azt jelenti, hogy egy vagy több számjegynek kell lennie. Tehát `http://127.0.0.1:8000/post//` nem érvényes, de `http://127.0.0.1:8000/post/1234567890/` teljesen jó! - `/` - kell még egy **/** - `$` - "vége"!
+Ez a rész `^post/(?P<pk>[0-9]+)/$` elég ijesztően néz ki, de ne aggódj,elmagyarázzuk:
+- `^`-vel kezdődik -- "eleje" - `post/` azt jelenti, hogy az eleje után az URL-nek tartalmaznia kell ezt: **post** és **/**. Eddig jó.
+- `(?P<pk>[0-9]+)` - ez a rész trükkösebb. Ez azt jelenti, a Django fogja, amit ideraksz, és átirányítja egy nézethez egy `pk` nevű változóként. `[0-9]` azt közli, hogy ez csak egy számjegy lehet, betű nem (tehát minden 0 és 9 között). `+` azt jelenti, hogy egy vagy több számjegynek kell lennie. Tehát `http://127.0.0.1:8000/post//` nem érvényes, de `http://127.0.0.1:8000/post/1234567890/` teljesen jó!
+- `/` - kell még egy **/** - `$`
+- "vége"!
 
 Ez azt jelenti, hogy ha beírod a `http://127.0.0.1:8000/post/5/` címet a böngésződbe, akkor a Django megérti, hogy egy `post_detail` nevű 1>nézetet</em> keresel, és közvetíti az információt, hogy a `pk` `5-tel` egyenlő annál a *nézetnél*.
 
@@ -145,7 +151,7 @@ Ez fog történni:
             </div>
         {% endif %}
         <h1>{{ post.title }}</h1>
-        <p>{{ post.text|linebreaks }}</p>
+        <p>{{ post.text|linebreaksbr }}</p>
     </div>
 {% endblock %}
 ```
@@ -167,7 +173,7 @@ Juppi! Működik!
 Jó lenne ellenőrizni, hogy még mindig működik-e a weboldalad a PythonAnywhere-en, igaz? Próbáld meg újra deployolni.
 
     $ git status
-    $ git add -A .
+    $ git add --all .
     $ git status
     $ git commit -m "Added view and template for detailed blog post as well as CSS for the site."
     $ git push

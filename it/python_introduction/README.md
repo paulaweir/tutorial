@@ -248,13 +248,13 @@ Se vuoi mostrare solo il primo numero, puoi farlo usando gli **indici**. L'indic
 
 Come puoi vedere, puoi accedere a diversi oggetti nella tua lista usando il nome della lista e l'indice dell'oggetto all'interno delle parentesi quadre.
 
-Per eliminare qualcosa dalla lista dovrai usare **indexes** come abbiamo visto sopra, e lo statement **del** (del è un'abbreviazione di delete). Proviamo a fare qualcosa per rafforzare quanto imparato prima; elimineremo il primo numero della lista.
+Per eliminare qualcosa dalla lista dovrai usare **indexes** come abbiamo visto sopra, e lo statement `pop()`. Proviamo a fare qualcosa per rafforzare quanto imparato prima; elimineremo il primo numero della lista.
 
     >>> print(lotteria)
     [59, 42, 30, 19, 12, 3, 199]
     >>> print(lotteria[0])
     59
-    >>> del lotteria[0]
+    >>> lotteria.pop(0)
     >>> print(lotteria)
     [42, 30, 19, 12, 3, 199]
     
@@ -322,9 +322,9 @@ Così come succede se applicato alle liste, il metodo `len()` restituisce il num
 
 Spero che abbia senso per te. :) Pronta per divertirti con i dizionari? Vai alla prossima riga per realizzare altre cose fantastiche.
 
-Puoi usare il comando `del` per cancellare un elemento nella directory. Se vuoi cancellare la voce che corrisponde alla chiave `'numeri_preferiti'`, digita il seguente comando:
+Puoi usare il comando `pop()` per cancellare un elemento nella directory. Se vuoi cancellare la voce che corrisponde alla chiave `'numeri_preferiti'`, digita il seguente comando:
 
-    >>> del partecipante['numeri_preferiti']
+    >>> partecipante.pop('numeri_preferiti')
     >>> partecipante
     {'paese': 'Polonia', 'linguaggio_preferito': 'Python', 'nome': 'Ola'}
     
@@ -406,7 +406,7 @@ Hai sentito parlare dell'espressione "comparare mele e arance"? Proviamo l'equiv
     >>> 1 > 'django'
     Traceback (most recent call last):
       File "<stdin>", line 1, in <module>
-    TypeError: unorderable types: int() > str()
+    TypeError: '>' not supported between instances of 'int' and 'str'
     
 
 Dall'espressione puoi capire che Python non è in grado di mettere a confronto un numero (`int`) e una stringa (`str`). Ci mostra invece un **TypeError** e ci dice che i due tipi non possono essere messi a confronto.
@@ -479,17 +479,17 @@ Ora dobbiamo salvare il file e dargli un nome descrittivo. Chiama il file **pyth
 
 Su un Mac, il comando assomiglierà a questo:
 
-    $ cd /Users/<your_name>/Desktop
+    $ cd ~/Desktop
     
 
 Su Linux, sarà come questo (la parola "Desktop" potrebbe essere tradotta nella tua lingua):
 
-    $ cd /home/<your_name>/Desktop
+    $ cd ~/Desktop
     
 
 E su windows, sara come questo:
 
-    > cd C:\Users\<your_name>\Desktop
+    > cd %HomePath%\Desktop
     
 
 Se rimani bloccata, chiedi aiuto.

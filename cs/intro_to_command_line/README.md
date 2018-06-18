@@ -1,12 +1,12 @@
 # Úvod k příkazové řádce
 
-Hm to je vzrušující, že?! Napíšeš svůj první řádek kódu za pouhých pár minut :)
+Hm, to je vzrušující, že? Napíšeš svůj první řádek kódu za pouhých pár minut :)
 
 **Dovol nám, abychom ti představili tvého prvního nového přítele: příkazovou řádku! **
 
 Následující kroky ti ukážou, jak používat černé okno, které všichni počítačoví odborníci používají. Může to na první pohled vypadat trochu děsivě, ale opravdu je to jen okno, které čeká na tvé příkazy.
 
-> **Poznáma** Ber, prosím, na vědomí, že v tomto tutoriálu používáme termíny 'adresář' a 'složka' zaměnitelně ale je to jedna a ta samá věc.
+> **Poznáma** Ber, prosím, na vědomí, že v tomto tutoriálu používáme termíny 'adresář' a 'složka', ale je to jedna a ta samá věc.
 
 ## Co je příkazová řádka?
 
@@ -14,7 +14,7 @@ Okno, které se obvykle nazývá **příkazová řádka** nebo **rozhraní pří
 
 ## Otevři rozhraní příkazové řádky
 
-Chceš-li začít experimentovat je třeba nejprve otevřít naše rozhraní příkazové řádky.
+Chceš-li začít experimentovat, je třeba nejprve otevřít naše rozhraní příkazové řádky.
 
 ### Windows
 
@@ -26,7 +26,7 @@ Aplikace → Nástroje → Terminál.
 
 ### Linux
 
-Pravděpodobně ji nalezneš pod Aplikace → Příslušenství → Terminál, ale závisí to na tvém systému. Pokud to tam není, jen to vygoogli :)
+Pravděpodobně ji nalezneš pod Aplikace → Příslušenství → Terminál, ale závisí to na tvém systému. Pokud to tam není, prostě to vygoogli :)
 
 ## Příkazová řádka
 
@@ -35,38 +35,38 @@ Nyní bys měla vidět bílé nebo černé okno, které čeká na tvé příkazy
 Pokud jsi na Mac nebo na Linuxu, pravděpodobně uvidíš výzvu začínající tímto znakem `$`, právě takhle:
 
 ```
-    $
+$
 ```  
 
-V systému Windows je to `>` tento znak:
+V systému Windows je to tento znak `>`:
 
 ```
-    >
+>
 ```  
 
 Každý příkaz budeš psát za tento znak a jednu mezeru, ale není nutné to zadávat. Tvůj počítač to udělá za tebe :)
 
-> Jen malá Poznámka: někteří mohou vidět něco jako `C:\Users\ola >` nebo `Olas-MacBook-Air: ~ ola$` před zanekem $ to je naprosto v pořádku. V tomto kurzu se jen snažíme vše zjednodušit na minimum.
+> Jen malá Poznámka: někteří mohou vidět něco jako `C:\Users\ola >` nebo `Olas-MacBook-Air: ~ ola$` před znakem $. To je naprosto v pořádku. V tomto kurzu se jen snažíme vše zjednodušit na minimum.
 
 ## Tvůj první příkaz (hurá!)
 
 Pojďme začít s něčím jednoduchým. Zadej tento příkaz:
 
 ```
-    $ whoami
+$ whoami
 ```  
 
 nebo
 
 ```
-    > whoami
+> whoami
 ```  
 
 A zmáčkni `enter`. Tohle je výsledek:
 
 ```
-    $ whoami
-    olasitarska
+$ whoami
+olasitarska
 ```  
 
 Jak vidíš, počítač právě vypsal tvé uživatelské jméno. Pěkný, co?:)
@@ -75,22 +75,22 @@ Jak vidíš, počítač právě vypsal tvé uživatelské jméno. Pěkný, co?:)
 
 ## Základy
 
-Každý operační systém má mírně odlišnou sadu příkazů na příkazové řádce, ujisti se, že sleduješ pokyny pro tvůj operační systém. Zkusme to, ano?
+Každý operační systém má mírně odlišnou sadu příkazů na příkazové řádce, takže se ujisti, že sleduješ pokyny pro tvůj operační systém. Zkusme to, ano?
 
 ### Aktuální složka
 
 Bylo by hezké vědět, kde právě jsme, ne? Podívejme se. Zadej následující příkaz a stiskni `enter`:
 
 ```
-    $ pwd
-    /Users/olasitarska
+$ pwd
+/Users/olasitarska
 ```  
 
 Pokud jsi v systému Windows:
 
 ```
-    > cd
-    C:\Users\olasitarska
+> cd
+C:\Users\olasitarska
 ```  
 
 Pravděpodobně se ti zobrazí něco podobného. Jakmile otevřeš příkazovou řádku, obvykle začínáš ve svém domovském adresáři.
@@ -101,26 +101,26 @@ Pravděpodobně se ti zobrazí něco podobného. Jakmile otevřeš příkazovou 
 
 ### Seznam souborů a adresářů
 
-Tak co je v něm? Bylo by fajn zjistit co je v našem adresáři. Podívejme se:
+Tak co je v něm? Bylo by fajn zjistit, co je v našem adresáři. Podívejme se:
 
 ```
-    $ ls
-    Aplikace
-    Desktop
-    Stažené soubory
-    Hudba...
+$ ls
+Aplikace
+Desktop
+Stažené soubory
+Hudba...
 ```  
 
 Windows:
 
 ```
-    > dir  
-    Directory of C:\Users\olasitarska
-    05/08/2014 07:28 PM <DIR> Applications
-    05/08/2014 07:28 PM <DIR> Desktop
-    05/08/2014 07:28 PM <DIR> Downloads
-    05/08/2014 07:28 PM <DIR> Music
-    ...
+> dir
+Directory of C:\Users\olasitarska
+05/08/2014 07:28 PM <DIR> Applications
+05/08/2014 07:28 PM <DIR> Desktop
+05/08/2014 07:28 PM <DIR> Downloads
+05/08/2014 07:28 PM <DIR> Music
+...
 ```  
 
 * * *
@@ -130,27 +130,27 @@ Windows:
 Teď pojďme do adresáře plochy:
 
 ```
-    $ cd Desktop
+$ cd Desktop
 ```  
 
 Windows:
 
 ```
-    > cd Desktop
+> cd Desktop
 ```  
 
 Zkontroluj, zda-li se adresář skutečně změnil:
 
 ```
-    $ pwd
-    /Users/olasitarska/Desktop
+$ pwd
+/Users/olasitarska/Desktop
 ```  
 
 Windows:
 
 ```
-    > cd
-    C:\Users\olasitarska\Desktop
+> cd
+C:\Users\olasitarska\Desktop
 ```  
 
 A je to!
@@ -164,16 +164,16 @@ A je to!
 Co si vytvořit pokusnou složku na ploše? Můžeš to udělat tímto způsobem:
 
 ```
-    $ mkdir pokus
+$ mkdir pokus
 ```  
 
 Windows:
 
 ```
-    > mkdir pokus
+> mkdir pokus
 ```  
 
-Tento malý příkaz vytvoří složku s názvem `pokus` na ploše. Jestli se na ploše složka vytvořila můžeš zkontrolovat pouhým pohledem na pracovní plochu nebo spuštěním příkazu `ls` nebo `dir`! Zkus to :)
+Tento malý příkaz vytvoří složku s názvem `pokus` na ploše. Zda se na ploše složka vytvořila můžeš zkontrolovat pouhým pohledem na pracovní plochu nebo spuštěním příkazu `ls` nebo `dir`! Zkus to :)
 
 > PRO tip: Pokud nechceš znovu a znovu zadávat stejné příkazy, zkus stisknutím `šipka nahoru` a `šipka dolů` na klávesnici přepínat mezi nedávno použitými příkazy.
 
@@ -186,19 +186,19 @@ Malá výzva: v nově vytvořeném adresáři `pokus` vytvoř adresář s názve
 #### Řešení:
 
 ```
-    $ cd pokus
-    $ mkdir test
-    $ ls
-    test
+$ cd pokus
+$ mkdir test
+$ ls
+test
 ```  
 
 Windows:
 
 ```
-    > cd pokus
-    > mkdir test
-    > dir
-    05/08/2014 07:28 PM <DIR>      test
+> cd pokus
+> mkdir test
+> dir
+05/08/2014 07:28 PM <DIR>      test
 ```  
 
 Gratulujeme! :)
@@ -207,61 +207,61 @@ Gratulujeme! :)
 
 ### Jak odstranit složku
 
-Nechceme si nechat nepořádek v počítači, takže musíme odstranit vše, co jsme až do tohoto okamžiku dělali.
+Nechceme si nechat nepořádek v počítači, takže musíme odstranit vše, co jsme až do tohoto okamžiku dělaly.
 
-Zaprvé potřebujeme se dostat zpátky na plochu:
+Za prvé se potřebujeme dostat zpátky na plochu:
 
 ```
-    $ cd ..
+$ cd ..
 ```  
 
 Windows:
 
 ```
-    > cd ..
+> cd ..
 ```  
 
-Použití `..` s příkazem `cd` změní tvůj aktuální adresář na rodičovský adresář (adresář který obsahuje tvůj aktuální adresář).
+Použití `..` s příkazem `cd` změní tvůj aktuální adresář na rodičovský adresář (adresář, který obsahuje tvůj aktuální adresář).
 
 Zkontroluj, kde se nacházíš:
 
 ```
-    $ pwd
-    /Users/olasitarska/Desktop
+$ pwd
+/Users/olasitarska/Desktop
 ```  
 
 Windows:
 
 ```
-    > cd
-    C:\Users\olasitarska\Desktop
+> cd
+C:\Users\olasitarska\Desktop
 ```  
 
 Teď je čas vymazat adresář `pokus`:
 
-> **Pozor**: odstraňování souborů pomocí `del`, `rmdir` nebo `rm` je nevratné, což znamená, * že odstraněné soubory budou navždy pryč*! Takže buď velmi opatrná s tímto příkazem.
+> **Pozor**: odstraňování souborů pomocí `del`, `rmdir` nebo `rm` je nevratné, což znamená, *že odstraněné soubory budou navždy pryč*! Takže buď s tímto příkazem velmi opatrná.
 
 ```
-    $ rm -r pokus
+$ rm -r pokus
 ```  
 
 Windows:
 
 ```
-    > rmdir /S pokus
-    Are you sure <Y/N>? Y
+> rmdir /S pokus
+Are you sure <Y/N>? Y
 ```  
 
 Hotovo! Vše je skutečně odstraněno. Pojďme to zkontrolovat:
 
 ```
-    $ ls
+$ ls
 ```  
 
 Windows:
 
 ```
-    > dir
+> dir
 ```  
 
 ### Zavření příkazové řádky
@@ -269,16 +269,16 @@ Windows:
 To je pro tuto chvíli vše! Bezpečně můžeš nyní zavřít příkazovou řádku. Uděláme to hackerským stylem, ano? :)
 
 ```
-    $ exit
+$ exit
 ```  
 
 Windows:
 
 ```
-    > exit
+> exit
 ```  
 
-Suprový, co?:)
+Suprový, co? :)
 
 ## Shrnutí
 

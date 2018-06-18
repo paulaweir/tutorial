@@ -14,16 +14,20 @@ Ok, allons-y ! Ouvrons ce fichier pour voir ce qu'il contient :
 from django.shortcuts import render
 
 # Create your views here.
-```    
+```
 
-Il n'y pas encore grand chose dans ce fichier. La vue la plus simple que l'on peut créer ressemble à ceci :
+Il n'y pas encore grand chose dans ce fichier.
+
+Les lignes qui commencent par `#` permettent de commenter notre code : ces lignes ne seront donc pas exécutées par Python. Pratique, non ?
+
+La vue la plus simple que l'on peut créer ressemble à ceci :
 
 ```python
 def post_list(request):
     return render(request, 'blog/post_list.html', {})
 ```
 
-Comme vous pouvez le voir, nous avons créé une méthode (`def`) appelé `post_list` qui prend une `request (requête)` et `return (retourne)` une méthode `render` qui va permettre d'assembler tout ça selon notre template `blog/post_list.html`.
+Comme vous pouvez le voir, nous avons créé une méthode (`def`) appelée `post_list` qui prend une `request (requête)` et `return (retourne)` une méthode `render` qui va permettre d'assembler tout ça selon notre template `blog/post_list.html`.
 
 Sauvegardez votre fichier et allez à l'adresse http://127.0.0.1:8000/ pour voir ce qui s'affiche maintenant.
 
@@ -35,4 +39,4 @@ Une autre erreur ! Voyons ce qu'elle nous dit :
 
 Celle-là est plutôt simple : *TemplateDoesNotExist*. Corrigeons ça en créant un template dans la section suivante !
 
-> Pour en apprendre un peu plus sur les vues dans Django, consultez la documentation officielle : https://docs.djangoproject.com/fr/1.8/topics/http/views/
+> Pour en apprendre un peu plus sur les vues dans Django, consultez la documentation officielle : https://docs.djangoproject.com/fr/1.11/topics/http/views/

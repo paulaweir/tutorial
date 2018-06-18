@@ -32,7 +32,11 @@ Pero ahora no queremos salir de la consola de Python. Queremos aprender más sob
     5
     
 
-¡Bien! ¿Ves como salió la respuesta? ¡Python sabe matemáticas! Podrías intentar otros comandos como: - `4 * 5` - `5 - 1` - `40 / 2`
+¡Bien! ¿Ves como salió la respuesta? ¡Python sabe matemáticas! Podrías intentar otros comandos como:
+
+- `4 * 5`
+- `5 - 1`
+- `40 / 2`
 
 Diviértete con esto por un momento y luego vuelve aquí :).
 
@@ -309,9 +313,9 @@ Como en las listas, el método `len()` en los diccionarios, devuelve el número 
 
 Espero tenga sentido hasta ahora. :) ¿Lista para más diversión con los diccionarios? Salta a la siguiente línea para algunas cosas sorprendentes.
 
-Puedes utilizar el comando `del` para borrar un elemento en el diccionario. Por ejemplo, si deseas eliminar la entrada correspondiente a la clave `'favorite_numbers'`, sólo tienes que escribir el siguiente comando:
+Puedes utilizar el comando `pop()` para borrar un elemento en el diccionario. Por ejemplo, si deseas eliminar la entrada correspondiente a la clave `'favorite_numbers'`, sólo tienes que escribir el siguiente comando:
 
-    >>> del participant['favorite_numbers']
+    >>> participant.pop('favorite_numbers')
     >>> participant
     {'country': 'Poland', 'favorite_language': 'Python', 'name': 'Ola'}
     
@@ -388,12 +392,12 @@ Puedes darle a Python todos los números para comparar que quieras, y siempre te
 *   **and** - si utilizas el operador `and`, ambas comparaciones deben ser True para que el resultado de todo el comando sea True
 *   **or** - si utilizas el operador `or`, sólo una de las comparaciones tiene que ser True para que el resultado de todo el comando sea True
 
-¿Has oído la expresión "comparar manzanas con naranjas"? Vamos a probar el equivalente en Python:
+¿Has oído la expresión "comparar peras con manzanas"? Vamos a probar el equivalente en Python:
 
     >>> 1 > 'django'
     Traceback (most recent call last):
       File "<stdin>", line 1, in <module>
-    TypeError: unorderable types: int() > str()
+    TypeError: '>' not supported between instances of 'int' and 'str'
     
 
 Aquí verás que al igual que en la expresión, Python no es capaz de comparar un número (`int`) y un string (`str`). En cambio, muestra un **TypeError** y nos dice que los dos tipos no se pueden comparar.
@@ -464,17 +468,17 @@ Con el archivo guardado, ¡es hora de ejecutarlo! Utilizando las habilidades que
 
 En una Mac, el comando se verá algo como esto:
 
-    cd /Users/<your_name>/Desktop
+    cd ~/Desktop
     
 
 En Linux, va a ser así (la palabra "Desktop" puede estar traducida a tu idioma):
 
-    cd /home/<your_name>/Desktop
+    cd ~/Desktop
     
 
 Y en Windows, será así:
 
-    cd C:\Users\<your_name>\Desktop
+    cd %HomePath%\Desktop
     
 
 Si te quedas atascada, sólo pide ayuda.

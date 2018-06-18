@@ -11,13 +11,13 @@ Después de eso, asegúrate de:
 *   Seguir a Django Girls en [Facebook][1] o [Twitter][2] para estar al día
 
  [1]: http://facebook.com/djangogirls
- [2]: http://twitter.com/djangogirls
+ [2]: https://twitter.com/djangogirls
 
 ### ¿Me puedes recomendar recursos adicionales?
 
 ¡Sí! En primer lugar, sigue adelante y prueba nuestro libro llamado [Django Girls Tutorial: Extensiones][3].
 
- [3]: http://djangogirls.gitbooks.io/django-girls-tutorial-extensions/
+ [3]: https://tutorial-extensions.djangogirls.org
 
 Más adelante, puedes intentar los recursos listados a continuación. ¡Son todos muy recomendables! 
 
@@ -32,9 +32,9 @@ Más adelante, puedes intentar los recursos listados a continuación. ¡Son todo
 
  [4]: https://docs.djangoproject.com/en/1.8/intro/tutorial01/
  [5]: http://newcoder.io/tutorials/
- [6]: http://www.codecademy.com/en/tracks/python
- [7]: http://www.codecademy.com/tracks/web
+ [6]: https://www.codecademy.com/en/tracks/python
+ [7]: https://www.codecademy.com/tracks/web
  [8]: https://github.com/ggcarrots/django-carrots/
  [9]: http://learnpythonthehardway.org/book/
- [10]: http://gettingstartedwithdjango.com/
- [11]: http://twoscoopspress.org/products/two-scoops-of-django-1-6
+ [10]: http://www.gettingstartedwithdjango.com/
+ [11]: https://twoscoopspress.org/products/two-scoops-of-django-1-6

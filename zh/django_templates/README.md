@@ -4,7 +4,7 @@
 
 ## 什么是模板标签呢？
 
-正如你在前面章节中所了解的那样， 我们并不能将python代码嵌入到HTML中。 因为浏览器不能识别python代码， 它只能解析HTML。 我们知道，HTML是静态页面，而python则显得更加动态。
+正如你在前面章节中所了解的那样， 我们并不能将 Python 代码嵌入到HTML中。 因为浏览器不能识别 Python 代码， 它只能解析HTML。 我们知道，HTML是静态页面，而 Python 则显得更加动态。
 
 **Django模板标签**允许我们将Python之类的内容翻译成HTML，所以你可以更快更简单的建立动态网站。哈哈！
 
@@ -28,7 +28,7 @@
 如你所见，我们得到如下：
 
 ```
-    [<Post: My second post>, <Post: My first post>]
+    <QuerySet [<Post: My second post>, <Post: My first post>]>
 ```
     
 
@@ -58,7 +58,7 @@
         <div>
             <p>published: {{ post.published_date }}</p>
             <h1><a href="">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaks }}</p>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
     {% endfor %}
 ```
@@ -70,7 +70,7 @@
 
  [3]: images/step3.png
 
-你注意到这次我们使用了一个明显不同的标记`{{ post.title }}` 或 `{{ post.text }}`？ 我们正在访问定义在`Post`模型中的每一个域。 此外，`|linebreaks`通过一个过滤器，使得行间隔编程段落。
+你注意到这次我们使用了一个明显不同的标记`{{ post.title }}` 或 `{{ post.text }}`？ 我们正在访问定义在`Post`模型中的每一个域。 此外，`|linebreaksbr`通过一个过滤器，使得行间隔编程段落。
 
 ## 还有一件事
 
@@ -81,7 +81,7 @@
 ```
     $ git status
     [...]
-    $ git add -A .
+    $ git add --all .
     $ git status
     [...]
     $ git commit -m "Modified templates to display posts from database."

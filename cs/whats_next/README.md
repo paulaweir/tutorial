@@ -11,13 +11,13 @@ Poté nezapomeň:
 *   Sleduj Django Girls na [Facebooku][1] nebo [Twitteru][2] a zůstaň v obraze
 
  [1]: http://facebook.com/djangogirls
- [2]: http://twitter.com/djangogirls
+ [2]: https://twitter.com/djangogirls
 
 ### Můžete mi doporučit nějaké další zdroje?
 
 Ano! Zaprvé, jdi a zkus naši další knihu, jmenuje se [Django Girls Tutorial: Extensions][3].
 
- [3]: http://djangogirls.gitbooks.io/django-girls-tutorial-extensions/
+ [3]: https://tutorial-extensions.djangogirls.org
 
 Později můžeš zkusit, některý ze zdrojů uvedených níže. Všechny můžeme velmi doporučit!
 
@@ -32,9 +32,9 @@ Později můžeš zkusit, některý ze zdrojů uvedených níže. Všechny můž
 
  [4]: https://docs.djangoproject.com/en/1.8/intro/tutorial01/
  [5]: http://newcoder.io/tutorials/
- [6]: http://www.codecademy.com/en/tracks/python
- [7]: http://www.codecademy.com/tracks/web
+ [6]: https://www.codecademy.com/en/tracks/python
+ [7]: https://www.codecademy.com/tracks/web
  [8]: https://github.com/ggcarrots/django-carrots/
  [9]: http://learnpythonthehardway.org/book/
- [10]: http://gettingstartedwithdjango.com/
- [11]: http://twoscoopspress.com/products/two-scoops-of-django-1-8
+ [10]: http://www.gettingstartedwithdjango.com/
+ [11]: https://twoscoopspress.com/products/two-scoops-of-django-1-8

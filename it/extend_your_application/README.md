@@ -22,7 +22,7 @@ Cominceremo aggiungendo un link all'interno del file `blog/templates/blog/post_l
                 {{ post.published_date }}
             </div>
             <h1><a href="">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaks }}</p>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
     {% endfor %}
 {% endblock content %}
@@ -54,7 +54,7 @@ Vogliamo che il nostro primo post venga visualizzato a questo **URL **: http://1
 Facciamo sì che l'URL nel file `blog/urls.py` punti Django ad una *view* chiamata `post_detail`, che mostrerà un intero post. Aggiungi la riga `url(r'^post/(?P<pk>[0-9]+)/$', views.post_detail, name='post_detail'),` al file `blog/urls.py`. Il file dovrebbe assomigliare a questo:
 
 ```python
-from django.conf.urls import include, url
+from django.conf.urls import url
 from . import views
 
 urlpatterns = [
@@ -146,7 +146,7 @@ Il risultato somiglierà a questo:
             </div>
         {% endif %}
         <h1>{{ post.title }}</h1>
-        <p>{{ post.text|linebreaks }}</p>
+        <p>{{ post.text|linebreaksbr }}</p>
     </div>
 {% endblock %}
 ```
@@ -168,7 +168,7 @@ Si! Ha funzionato!
 Sarebbe bello vedere se il tuo sito Web sarà ancora funzionante in PythonAnywhere, vero? Proviamo a fare un alrto deploy.
 
     $ git status
-    $ git add -A .
+    $ git add --all .
     $ git status
     $ git commit -m "Added view and template for detailed blog post as well as CSS for the site."
     $ git push

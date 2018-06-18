@@ -2,7 +2,7 @@
 
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/DjangoGirls/tutorial?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-> Cette œuvre est mise à disposition selon les termes de la Licence Creative Commons Attribution-ShareAlike 4.0 International. Pour obtenir une copie de cette licence, visitez http://creativecommons.org/licenses/by-sa/4.0/
+> Cette œuvre est mise à disposition selon les termes de la Licence Creative Commons Attribution-ShareAlike 4.0 International. Pour obtenir une copie de cette licence, visitez https://creativecommons.org/licenses/by-sa/4.0/
 
 ## Translation
 
@@ -14,7 +14,7 @@ Avez-vous déjà eu l'impression que la technologie prend une place de plus en p
 
 Hé bien, bonne nouvelle ! Programmer n'est pas aussi dur que ça en a l'air, et nous sommes là pour vous montrer à quel point ça peut être amusant.
 
-Ce tutoriel ne va pas vous transformer en programmeuse du jour au lendemain. Devenir vraiment bonne peut prendre des mois, voire même des années d'apprentissage et de pratique. Mais nous voulons vous montrer que programmer ou créer des sites web n'est pas aussi compliqué que ça en a l'air. Nous allons essayer de vous expliquer différents morceaux afin de rendre la technologie moins intimidante.
+Ce tutoriel ne va pas vous transformer en programmeuse du jour au lendemain. Devenir vraiment bonne peut prendre des mois, voire même des années d'apprentissage et de pratique. Mais nous voulons vous montrer que programmer ou créer des sites web n'est pas aussi compliqué que ça en ait l'air. Nous allons essayer de vous expliquer différents morceaux afin de rendre la technologie moins intimidante.
 
 Nous espérons arriver à vous faire aimer la technologie autant que nous l'aimons !
 
@@ -38,7 +38,7 @@ Alors, [commençons par le commencement...][3]
 
 Ce tutoriel est maintenu par [DjangoGirls][4]. Si vous rencontrez des erreurs ou souhaitez simplement suggérer une amélioration du tutoriel, il est important de respecter [les règles de contribution][5].
 
- [4]: http://djangogirls.org/
+ [4]: https://djangogirls.org/
  [5]: https://github.com/DjangoGirls/tutorial/blob/master/README.md
 
 ## Voulez-vous nous aider à traduire le tutoriel dans d'autres langues ?

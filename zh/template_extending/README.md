@@ -45,7 +45,7 @@
                                 {{ post.published_date }}
                             </div>
                             <h1><a href="">{{ post.title }}</a></h1>
-                            <p>{{ post.text|linebreaks }}</p>
+                            <p>{{ post.text|linebreaksbr }}</p>
                         </div>
                     {% endfor %}
                     </div>
@@ -94,7 +94,7 @@
                 {{ post.published_date }}
             </div>
             <h1><a href="">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaks }}</p>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
     {% endfor %}
 ```
@@ -107,7 +107,7 @@
 ```
     
 
-{% raw %}这意味着我们在 `post_list.html`模板文件中扩展了 `base.html` 模板的内容。 还有一件事：将所有(除了我们刚刚加入的那行) 内容置于`{% block content %}`和 `{% endblock content %}`之间。。 像这样:{% endraw %}
+{% raw %}这意味着我们在 `post_list.html`模板文件中扩展了 `base.html` 模板的内容。 还有一件事：将所有(除了我们刚刚加入的那行) 内容置于`{% block content %}`和 `{% endblock %}`之间。。 像这样:{% endraw %}
 
 ```html
     {% extends 'blog/base.html' %}
@@ -119,10 +119,10 @@
                     {{ post.published_date }}
                 </div>
                 <h1><a href="">{{ post.title }}</a></h1>
-                <p>{{ post.text|linebreaks }}</p>
+                <p>{{ post.text|linebreaksbr }}</p>
             </div>
         {% endfor %}
-    {% endblock content %}
+    {% endblock %}
 ```
     
 

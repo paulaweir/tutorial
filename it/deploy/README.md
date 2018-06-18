@@ -6,11 +6,11 @@ Fino ad ora il tuo sito è accessibile solo dal tuo computer, ma ora imparerai c
 
 Come hai già visto, un sito internet ha sede in un server. Ci sono tantissimi server providers disponibili su internet. Noi ne useremo uno che ha un processo di deployment relativamente semplice: [PythonAnywere][1]. Questo provider è gratuito per piccole applicazioni che non hanno troppi visitatori. Sarà quindi perfetto per te al momento.
 
- [1]: http://pythonanywhere.com/
+ [1]: https://www.pythonanywhere.com/
 
 L'altro servizio esterno che useremo è [GitHub][2], che è un servizio di hosting di codice. Ne esistono altri, ma di questi tempi quasi tutti i programmatori hanno un account GitHub e ora lo avrai anche tu!
 
- [2]: http://www.github.com
+ [2]: https://www.github.com
 
 Useremo GitHub come trampolino di lancio per importare ed esportare il nostro codice su PythonAnywhere.
 
@@ -44,6 +44,7 @@ Git memorizzerà le modifiche a tutti i file e le cartelle in questa directory, 
     __pycache__
     myvenv
     db.sqlite3
+    /static
     .DS_Store
     
 
@@ -71,7 +72,7 @@ E salvalo come `.gitignore` all'interno della cartella "djangogirls".
 
 E finalmente salviamo le nostre modifiche. vai alla tua console ed esegui questi comandi:
 
-    $ git add -A .
+    $ git add --all .
     $ git commit -m "La mia app Django Girls, primo commit"
      [...]
      13 files changed, 200 insertions(+)
@@ -264,6 +265,7 @@ Elimina tutti i contenuti e sostituiscili con qualcosa di simile:
 
 ```python
 import os
+import sys
 
 path = '/home/<il-tuo-username>/my-first-blog'  # usa il tuo username qui
 if path not in sys.path:

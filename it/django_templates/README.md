@@ -26,7 +26,7 @@ Prova questo nel tuo template `blog/templates/blog/post_list.html`. Sostituisci 
 
 Come vedi, quello che abbiamo è:
 
-    [<Post: My second post>, <Post: My first post>]
+    <QuerySet [<Post: My second post>, <Post: My first post>]>
     
 
 Significa che Django lo vede come una lista di oggetti. Ricordi dalla **Introduzione a Python** come possiamo rendere visibili le liste? Sì, con for loops! In un template Django si fanno così:
@@ -54,7 +54,7 @@ Funziona! Ma noi vogliamo che vengano mostrate come i post statici che abbiamo c
     <div>
         <p>published: {{ post.published_date }}</p>
         <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaks }}</p>
+        <p>{{ post.text|linebreaksbr }}</p>
     </div>
 {% endfor %}
 ```
@@ -65,7 +65,7 @@ Funziona! Ma noi vogliamo che vengano mostrate come i post statici che abbiamo c
 
  [3]: images/step3.png
 
-Ti sei accorto che abbiamo utilizzato una notazione leggermente diversa questa volta `{{ post.title }}` oppure `{{ post.text }}`? Stiamo introducendo i dati in ciascuno dei campi definiti nel nostro modello `Post`. Inoltre le `|linebreaks` stanno spingendo il testo dei post attraverso un filtro per trasformare le line-breaks in paragrafi.
+Ti sei accorto che abbiamo utilizzato una notazione leggermente diversa questa volta `{{ post.title }}` oppure `{{ post.text }}`? Stiamo introducendo i dati in ciascuno dei campi definiti nel nostro modello `Post`. Inoltre le `|linebreaksbr` stanno spingendo il testo dei post attraverso un filtro per trasformare le line-breaks in paragrafi.
 
 ## Un' ultima cosa
 
@@ -75,7 +75,7 @@ Sarebbe bello vedere se il tuo sito funziona ancora su Internet, giusto? Proviam
 
     $ git status
     [...]
-    $ git add -A .
+    $ git add --all .
     $ git status
     [...]
     $ git commit -m "Modified templates to display posts from database."

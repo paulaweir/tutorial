@@ -43,7 +43,7 @@ Luego ábrelo y copia todo lo que hay en `post_list.html` al archivo `base.html`
                                 {{ post.published_date }}
                             </div>
                             <h1><a href="">{{ post.title }}</a></h1>
-                            <p>{{ post.text|linebreaks }}</p>
+                            <p>{{ post.text|linebreaksbr }}</p>
                         </div>
                     {% endfor %}
                     </div>
@@ -89,7 +89,7 @@ Ahora guárdalo y abre tu archivo `blog/templates/blog/post_list.html` de nuevo.
                 {{ post.published_date }}
             </div>
             <h1><a href="">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaks }}</p>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
     {% endfor %}
 ```
@@ -99,7 +99,7 @@ Y ahora agrega esta línea al inicio del archivo:
     {% extends 'blog/base.html' %}
 ``` 
 
-Significa que ahora estamos extendiendo de la plantilla `base.html` en `post_list.html`. Sólo nos falta una cosa: poner todo (excepto la línea que acabamos de agregar) entre `{% block content %}` y `{% endblock content %}`. Como esto:
+Significa que ahora estamos extendiendo de la plantilla `base.html` en `post_list.html`. Sólo nos falta una cosa: poner todo (excepto la línea que acabamos de agregar) entre `{% block content %}` y `{% endblock %}`. Como esto:
 
 ``` html
     {% extends 'blog/base.html' %}
@@ -111,10 +111,10 @@ Significa que ahora estamos extendiendo de la plantilla `base.html` en `post_lis
                     {{ post.published_date }}
                 </div>
                 <h1><a href="">{{ post.title }}</a></h1>
-                <p>{{ post.text|linebreaks }}</p>
+                <p>{{ post.text|linebreaksbr }}</p>
             </div>
         {% endfor %}
-    {% endblock content %}
+    {% endblock %}
 ```
 
 ¡Eso es todo! Verifica que tu sitio web aún funcione apropiadamente :)

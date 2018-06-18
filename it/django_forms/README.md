@@ -92,7 +92,7 @@ Apri il file `blog/urls.py` e aggiungi:
 Il risultato finale sarà:
 
 ```python
-from django.conf.urls import include, url
+from django.conf.urls import url
 from . import views
 
 urlpatterns = [
@@ -190,7 +190,7 @@ form = PostForm(request.POST)
 
 Facile! Come prossima cosa dobbiamo controllare se il form è corretto (per cui che tutti i campi necessari siano stati impostati e che non ci siano valori sbagliati). Possiamo fare questo con `form.is_valid()`.
 
-Se la forma viene ritenuta valida verrà salvata!
+Se il form viene ritenuto valido verrà salvato!
 
 ```python
 if form.is_valid():
@@ -211,10 +211,10 @@ from django.shortcuts import redirect
 Aggiungilo all'inizio del file. E ora possiamo dire: vai alla pagina `post_detail` per il post appena creato.
 
 ```python
-return redirect('blog.views.post_detail', pk=post.pk)
+return redirect('post_detail', pk=post.pk)
 ```
 
-`blog.views.post_detail` é il nome della view che vogliamo visitare. Ti ricordi che questa *view* ha bisogno della variabile `pk`? Per passarla alla nostre views utilizziamo `pk=post.pk`, dove `post` è il post appena creato!
+`post_detail` é il nome della view che vogliamo visitare. Ti ricordi che questa *view* ha bisogno della variabile `pk`? Per passarla alla nostre views utilizziamo `pk=post.pk`, dove `post` è il post appena creato!
 
 Ok, abbiamo parlato abbastanza ora e forse sei curioso/a di vedere l'aspetto della nostra *view*, giusto?
 
@@ -227,7 +227,7 @@ def post_new(request):
             post.author = request.user
             post.published_date = timezone.now()
             post.save()
-            return redirect('blog.views.post_detail', pk=post.pk)
+            return redirect('post_detail', pk=post.pk)
     else:
         form = PostForm()
     return render(request, 'blog/post_edit.html', {'form': form})
@@ -281,7 +281,7 @@ per cui il tuo template sarà così:
         {% endif %}
         <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
         <h1>{{ post.title }}</h1>
-        <p>{{ post.text|linebreaks }}</p>
+        <p>{{ post.text|linebreaksbr }}</p>
     </div>
 {% endblock %}
 ```
@@ -306,7 +306,7 @@ def post_edit(request, pk):
             post.author = request.user
             post.published_date = timezone.now()
             post.save()
-            return redirect('blog.views.post_detail', pk=post.pk)
+            return redirect('post_detail', pk=post.pk)
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
@@ -372,7 +372,7 @@ Vediamo se funziona su PythonAnywhere. È l'ora di un altro deploy!
 
 ```
 $ git status
-$ git add -A .
+$ git add --all .
 $ git status
 $ git commit -m "Added views to create/edit blog post inside the site."
 $ git push

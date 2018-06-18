@@ -42,7 +42,7 @@
                             {{ post.published_date }}
                         </div>
                         <h1><a href="">{{ post.title }}</a></h1>
-                        <p>{{ post.text|linebreaks }}</p>
+                        <p>{{ post.text|linebreaksbr }}</p>
                     </div>
                 {% endfor %}
                 </div>
@@ -88,7 +88,7 @@
             {{ post.published_date }}
         </div>
         <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaks }}</p>
+        <p>{{ post.text|linebreaksbr }}</p>
     </div>
 {% endfor %}
 ```
@@ -96,7 +96,7 @@
 Ми хочемо використати це як частина нашого шаблону для всіх блоків контенту.
 Час додати теги блоків до цього файлу!
 
-{% raw %}Ви хочете, щоб ваший тег блоку підходив до тегу у файлі `base.html`. Ви такоже хочете, щоб він включав в себе весь код, що належить вашим блокам з контентом. Щоб зробити це, розмістіть все між `{% block content %}` і `{% endblock content %}`. Як тут: {% endraw %}
+{% raw %}Ви хочете, щоб ваший тег блоку підходив до тегу у файлі `base.html`. Ви такоже хочете, щоб він включав в себе весь код, що належить вашим блокам з контентом. Щоб зробити це, розмістіть все між `{% block content %}` і `{% endblock %}`. Як тут: {% endraw %}
 
 ```html
 
@@ -107,7 +107,7 @@
                 {{ post.published_date }}
             </div>
             <h1><a href="">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaks }}</p>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
     {% endfor %}
 {% endblock %}
@@ -123,7 +123,7 @@
                 {{ post.published_date }}
             </div>
             <h1><a href="">{{ post.title }}</a></h1>
-            <p>{{ post.text|linebreaks }}</p>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
     {% endfor %}
 {% endblock %}
